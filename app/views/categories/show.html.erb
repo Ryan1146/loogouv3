@@ -1,0 +1,37 @@
+<div class="wrapper">
+        <div class="activityZoon">
+            <div class="activityZoonIn">
+                <div class="activeCateZoon">
+                    <div class="cateTit"><%= @category.name%></div>
+                    
+                    <%@activities.each do |activity|%>
+                    <div class="activityItem">
+                        <div class="activityTime"><%=activity.date%></div>
+                        <div class="activityPic"></div>
+                        <div class="contentTit"><span><%=activity.location%></span>&nbsp;&nbsp;&nbsp;<span><%=activity.title%></span></div>
+                        <div class="contentIn"><%= truncate(activity.content , :length=>300)%></div>
+                        
+                        <div class="readMore"><%=link_to 'readMore' , activity_path(activity) %>
+                        </div>
+
+
+                        <%= link_to 'Show' , category_activity_path(@category ,activity) , class: 'btn brn-primary btn-lg'%>
+                    </div>
+                    <%end%>
+          
+                </div>
+
+            </div>
+        </div>
+        <div class="activityPageBox">
+            上一頁  5  6  7  8  9  下一頁
+        </div>
+        <div class="test"></div>
+        <div class="footer"></div>
+        
+
+
+    </div>
+
+
+    <%= render :partial=>'layouts/header' , :locals => {:categories => @categories}%>

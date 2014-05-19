@@ -2,6 +2,18 @@ Loogouv3::Application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
   root "pages#home"
+
+  resources :activities
+  resources :categories
+  
+  resources :categories do
+    resources :activities
+  end
+
+  namespace :admin do
+    resources :activities
+    resources :atricles
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
