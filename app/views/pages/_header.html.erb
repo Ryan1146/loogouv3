@@ -1,0 +1,76 @@
+        <div class="navBox">
+            <div class="nav">
+                    <div class="logo"><%=image_tag('logo.png')%></div>
+                    <div class="navItem navArticle">
+                        <div class="navItemIn">
+                            文章分類
+                        </div>
+                        <div class="subList">
+
+                            <% categories.each do |category| %>
+
+                                <%= link_to category_path(category) do%>
+                                    <div class="subListItem">
+                                        <%=category.name%>
+                                    </div>
+                                <%end%>
+                            <%end%>
+
+                        </div>
+                    </div>
+                    <div class="navItem navActivity">
+                        <div class="navItemIn">
+                            活動分類
+                        </div>
+                        <div class="subList">
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navItem navAboutUs">
+                        <div class="navItemIn">
+                            關於我們
+                        </div>
+                        <div class="subList">
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="subListItem">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+        </div>
