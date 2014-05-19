@@ -15,9 +15,9 @@
 // require turbolinks
 // require_tree .
 
-//= require_tree ./customization/scripts
-//= require_tree ./customization/js
-//= require bootstrap
+// require_tree ./customization/scripts
+// require_tree ./customization/js
+// require bootstrap
 
 //= require ckeditor/override
 //= require ckeditor/init
