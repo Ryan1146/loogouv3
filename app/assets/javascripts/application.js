@@ -19,8 +19,8 @@
 //= require ckeditor/init
 
 
-//= require_directory ./customization/scripts
-//= require_directory ./customization/js
+//= require_tree ./customization/scripts
+//= require_tree ./customization/js
 //= require bootstrap
 
 

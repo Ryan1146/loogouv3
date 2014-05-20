@@ -221,12 +221,13 @@ $(document).on('ready page:load', function (){
             this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='"+ this.src +"')";
         });
     }
-    
-});
-	
-$(function(){
-	$.Body =$('body');	
-	$.Window = $(window);
+
+
+
+
+    $(function(){
+    $.Body =$('body');  
+    $.Window = $(window);
     $.collectBtn = $.Body.find('div.collectBtn');
     $.flagItem = $.Body.find('div.flagItem');
     $.navBox = $.Body.find('div.navBox');
@@ -240,4 +241,8 @@ $(function(){
 
     
 });
+    
+});
+	
+
 
