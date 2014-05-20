@@ -4,9 +4,9 @@ Loogouv3::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      :bucket => "loogouv10",
+      :access_key_id => "AKIAJFK2O6UVG3SCIDUQ",
+      :secret_access_key => "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"
     }
   }
 
