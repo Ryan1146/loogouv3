@@ -8,7 +8,7 @@ class KindsController < ApplicationController
 		@categories = Category.all
 		#@articles = @kind.articles
 
-		@articles = @kind.articles.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
+		@articles = @kind.articles.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
 
 		#@category = Category.find(params[:id])
 		#@activities = @category.activities
