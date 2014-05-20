@@ -1,4 +1,6 @@
 $(document).on('ready page:load', function (){
+
+
     $.fn.MainDataInIt = function () {
         //$.Body.PlayCollect();
         $.Body.DragIt();
@@ -6,6 +8,8 @@ $(document).on('ready page:load', function (){
         $.Body.EventInIt();
         $.Body.moveIt();
     }
+
+
     $.fn.moveIt = function(){
         var moveItem = $.Body.find('div.moveItem'),
             moveItemNum = moveItem.length,//總共幾頁
@@ -139,13 +143,16 @@ $(document).on('ready page:load', function (){
     }
     $.fn.DragIt = function () {
         $.Body.find('div.card').css({'cursor':'pointer'});
+        //
+        /*
         $.Body.find('div.card').draggable({ 
             start:  function() { scrollBarToData() }, 
             drag:   function() { scrollBarToData() }, 
             stop:   function() { scrollBarToDataEnd() }/*, 
             containment: "parent",
             axis: "x"*/
-        });
+        //});
+        
         var pozArray = "";
         function scrollBarToData () {
             var offset = $.Body.find('div.card').offset(),
@@ -214,7 +221,8 @@ $(document).on('ready page:load', function (){
             this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='"+ this.src +"')";
         });
     }
-})(jQuery);
+    
+});
 	
 $(function(){
 	$.Body =$('body');	

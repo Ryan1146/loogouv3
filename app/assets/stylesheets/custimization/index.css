@@ -1,0 +1,63 @@
+@charset "utf-8";
+html                      {width: 100%; height: 100%;}
+body                      {width: 100%; min-width: 980px;}
+a                         {text-decoration: none;}
+div.wrapper               {position: relative; width: 100%; min-width: 980px;} 
+div.navBox                {/*position: absolute;*/position: fixed; width: 100%; min-width: 980px; height: 90px; left: 0px; top: 0px;}
+div.nav                   {position: relative; width: 980px; height: 90px; background: #eee; left: 0px; top: 0px; margin: 0 auto;}
+div.main                  {position: relative; width: 100%; min-width: 980px; height: 590px; background: #ccc;}
+div.mainIn                {position: relative; width: 980px; height: 100%; margin: 0 auto;}
+div.articleZoon           {position: relative; width: 100%; min-width: 980px; background: #aaa;}
+div.articleZoonIn         {position: relative; width: 980px; background: #bbb; margin: 0 auto; padding: 1px 0px;}
+div.articleItem           {position: relative; width: 980px; height: 300px; left: 0px; top: 0px; margin: 5px 0px; background: #aaa;}
+div.articlePic            {position: absolute; width: 300px; height: 300px; left: 0px; top: 0px; background: #030;}
+div.articlePic img        {position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;}
+div.articleContent        {position: absolute; width: 680px; height: 300px; left: 300px; top: 0px;}
+div.contentTit            {position: relative; width: 100%; line-height: 40px; font-size: 35px; font-weight: bold; font-family: "微軟正黑體"; left: 0px; top: 0px;}
+div.readMore              {position: absolute; width: 120px; height: 30px; line-height: 30px; cursor: pointer; right: 0px; bottom: 0px; background: #eee; text-align: center;}
+div.readMore:hover        {background: #999;}
+div.moreArticle           {position: relative; width: 100%; min-width: 980px; height: 30px; left: 0px; top: 0px;}
+div.moreArticleBtn        {position: absolute; width: 120px; height: 30px; margin-left: -60px; left: 50%; top: 0px; cursor: pointer; line-height: 30px; background: #e0e; text-align: center;}
+div.footer                {position: relative; width: 100%; min-width: 980px; height: 30px; background: #eee;}
+/*moveBox*/
+div.moveBox                      {position: absolute; width: 980px; height: 450px; top: 90px; overflow: hidden;}
+div.moveList                     {position: absolute; width: 1960px; height: 450px; left: 0px; top: 0px;}
+div.moveItem                     {position: absolute; width: 980px; height: 450px; left: 0px; top: 0px; display: none; text-align: center;}
+div.moveNav                      {position: absolute; width: 980px; height: 30px; left: 0px; top: 550px; text-align: center;}
+div.moveNavItem                  {position: relative; width: 30px; height: 30px; background: #ccc; text-align: center; display: inline-block; cursor: pointer; line-height: 30px; margin: 0 5px;}
+div.moveNavItem:nth-child(1)     {background: #999;}
+div.moveItem0                    {background: #f00; display: block;}
+div.moveItem1                    {background: #0f0;}
+div.moveItem2                    {background: #ff0;}
+div.moveItem3                    {background: #0ff;}
+div.moveItem4                    {background: #f0f;}
+div.moveBar                      {position: absolute; width: 915px; height: 30px; top: 0px; margin: 0 auto; text-align: center; display: none;}
+div.moveLeft                     {position: relative; width: 30px; height: 30px; background: #ccc; text-align: center; display: inline-block; cursor: pointer; line-height: 30px; margin: 0 5px;}
+div.moveRight                    {position: relative; width: 30px; height: 30px; background: #ccc; text-align: center; display: inline-block; cursor: pointer; line-height: 30px; margin: 0 5px;}  
+div.moveLeft:hover               {background: #999;}
+div.moveRight:hover              {background: #999;}
+div.moveHidden                   {display: none; background: #fff;}
+div.titBox                       {position: absolute; width: 980px; height: 100px; background: #400; left: 0px; bottom: 10px; border: 3px solid #eee; box-sizing: border-box;}
+/*nav*/
+div.logo                         {position: relative; float: left; width: 120px; height: 90px; left: 0px; top: 0px; background: #0d0;}
+div.navItem                      {position: relative; float: left; width: 120px; height: 90px; background: #00d; cursor: pointer;}
+div.navItemIn                    {position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; text-align: center; line-height: 90px;}
+div.subList                      {position: relative; width: 980px; background: #600; padding: 0px 0px; top: 90px; text-align: center; /*display: none;*/ height: 0px; overflow: hidden; -webkit-transition:all 0.2s; -moz-transition: all 0.2s; -ms-transition: all 0.2s; transition: all 0.2s;}
+div.subListItem                  {position: relative; display: inline-block; width: 120px; height: 50px; line-height: 50px; background: #050; margin: 0px 0px; -webkit-transition:all 0.5s; -moz-transition: all 0.5s; -ms-transition: all 0.5s; transition: all 0.5s; cursor: pointer; color: #fff;}
+div.navItem:hover div.subList    {display: block; height: 50px;}
+div.subListItem:hover            {opacity: 0.6; filter: alpha(opacity = 60); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";}
+div.test                         {position: fixed; width: 100%; min-width: 980px; height: 90px; background: #f00; box-sizing: border-box; border: 5px solid #000; left: 0px; top: 0px; display: none;}
+div.navArticle div.subList       {left: -120px;}           
+div.navActivity div.subList      {left: -240px;}           
+div.navAboutUs div.subList       {left: -360px;}    
+
+
+
+
+
+
+
+
+
+
+
