@@ -1,1 +1,100 @@
-<%= cktext_area :info, :cols => 40, :ckeditor => {:uiColor => '#AADC6E', :toolbar => 'mini'} %>
+
+
+    <div class="wrapper">
+        <div class="main">
+            <div class="mainIn">
+                <div class="moveBox">
+                    <div class="moveList">
+
+                    	
+
+                        <div class="moveItem moveItem0">
+
+                        		<%= image_tag @articles_top_five[0].image.url %>
+                            <div class="titBox">
+
+                            	<%= @articles_top_five[0].title %>
+                            </div>
+                        </div>
+                        <div class="moveItem moveItem1">
+                        	<%= image_tag @articles_top_five[1].image.url %>
+                            <div class="titBox">
+                            	<%= @articles_top_five[1].title %>
+                            </div>
+                        </div>
+                        <div class="moveItem moveItem2">
+                        	<%= image_tag @articles_top_five[2].image.url %>
+                            <div class="titBox">
+                            	<%= @articles_top_five[2].title %>
+                            </div>
+                        </div>
+                        <div class="moveItem moveItem3">
+                        	<%= image_tag @articles_top_five[3].image.url %>
+                            <div class="titBox">
+                            	<%= @articles_top_five[3].title %>
+                            </div>
+                        </div>
+                        <div class="moveItem moveItem4">
+                        	<%= image_tag @articles_top_five[4].image.url %>
+                            <div class="titBox">
+                            	<%= @articles_top_five[4].title %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="moveNav">
+                </div>
+                <div class="moveBar">
+                    <div class="moveHidden">L</div>
+                    <div class="moveLeft">L</div>
+                    <div class="moveRight">R</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="articleZoon">
+            <div class="articleZoonIn">
+               
+            	<% @articles.each do |article|%>
+                <div class="articleItem">
+                    <div class="articlePic">
+                    	<%= image_tag article.image.url %>
+                    </div>
+                    <div class="articleContent">
+                    	
+                        <div class="contentTit"><%= article.title%></div>
+                        <div class="contentIn"><%= truncate(article.description , :length=>300)%></div>
+                    </div>
+                    
+                    
+
+                    		<%= link_to 'Show' , article_path(article) , class: 'btn brn-primary btn-lg'%>
+                    
+                    
+                        <div class="readMore"><%=link_to 'readMore' , article_path(article) %>
+                        </div>
+                    
+                  	
+                </div>
+              <% end %>
+
+
+
+            </div>
+        </div>
+        <div class="moreArticle">
+            <a href="">
+                <div class="moreArticleBtn">更多文章</div>
+            </a>
+            
+        </div>
+        <div class="test"></div>
+        <div class="footer"></div>
+
+       
+       <%= render :partial=>'header' , :locals => {:categories => @categories , :kinds => @kinds}%>
+       
+    
+    </div>
+
+

@@ -1,0 +1,31 @@
+
+<h1>Index</h1>
+
+<div class = "row">
+	<div class = "col-md-12">
+
+	<%= link_to("new article" , new_admin_article_path) %>
+	
+	<ul>
+	<% @articles.each do |article|%>
+
+	<li>
+		<p>title: <%= article.title%></p>
+		<p>image : <%= image_tag article.image.url %></p>
+		<p>author: <%= article.author%></p>	
+		<p>date: <%= article.date%></p>
+		<p>priority: <%= article.priority%></p>
+		<p>content: <%= article.content%></p>
+
+		<%= link_to 'Show' , admin_article_path(article) , class: 'btn brn-primary btn-lg'%>
+		<%= link_to 'Edit' , edit_admin_article_path(article) , class: 'btn brn-primary btn-lg'%>
+		<%= link_to 'Delete' , admin_article_path(article) , method: :delete , class: 'btn brn-primary btn-lg'%>
+
+	</li>
+	<% end%>
+	</ul>
+
+
+
+	</div>
+</div>

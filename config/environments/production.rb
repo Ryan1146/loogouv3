@@ -1,4 +1,16 @@
 Loogouv3::Application.configure do
+
+  #connect heroku to amazon S3
+  #modify for ckeditor
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "loogouv10",
+      :access_key_id => "AKIAJFK2O6UVG3SCIDUQ",
+      :secret_access_key => "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"
+    }
+  }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -27,7 +39,8 @@ Loogouv3::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  #config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true

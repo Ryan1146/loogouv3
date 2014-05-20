@@ -1,0 +1,42 @@
+<div class="wrapper">
+        <div class="activityZoon">
+            <div class="activityZoonIn">
+                <div class="activeCateZoon">
+                    <div class="cateTit"><%= @kind.name%></div>
+                    
+                    <%@articles.each do |article|%>
+                    <div class="activityItem">
+                        <div class="activityTime"><%=article.date%></div>
+                        <div class="activityPic"></div>
+                       &nbsp;&nbsp;&nbsp;<span><%=article.title%></span></div>
+                        <div class="contentIn"><%= truncate(article.content , :length=>300)%></div>
+                        
+                        <div class="readMore"><%=link_to 'readMore' , article_path(article) %>
+                        </div>
+
+
+                        <%= link_to 'Show' , kind_article_path(@kind ,article) , class: 'btn brn-primary btn-lg'%>
+                    </div>
+                    <%end%>
+          
+                </div>
+
+            </div>
+        </div>
+        <div class="activityPageBox">
+            上一頁  5  6  7  8  9  下一頁
+        </div>
+        <div class="test"></div>
+        <div class="footer"></div>
+        
+
+
+    </div>
+
+    <div class="center">
+
+    <%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+    </div>
+
+
+    <%= render :partial=>'layouts/header' , :locals => {:categories => @categories , :kinds => @kinds}%>
