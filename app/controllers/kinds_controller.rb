@@ -5,6 +5,7 @@ class KindsController < ApplicationController
 	def show
 
 		@kinds = Kind.all
+		@categories = Category.all
 		@articles = @kind.articles
 
 		#@category = Category.find(params[:id])
