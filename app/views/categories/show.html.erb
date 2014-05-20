@@ -33,5 +33,12 @@
 
     </div>
 
+    <div class="center">
+
+    <%= will_paginate @articles, renderer: BootstrapPagination::Rails %>
+    </div>
+
+
+
 
     <%= render :partial=>'layouts/header' , :locals => {:categories => @categories , :kinds => @kinds}%>

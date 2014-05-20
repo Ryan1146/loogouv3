@@ -6,7 +6,9 @@ class CategoriesController < ApplicationController
 
 		@categories = Category.all
 		@kinds = Kind.all
-		@activities = @category.activities
+		#@activities = @category.activities
+
+		@activities = @category.activities.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
 
 		#@category = Category.find(params[:id])
 		#@activities = @category.activities

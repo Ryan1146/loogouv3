@@ -49,7 +49,7 @@ class Admin::ArticlesController < ApplicationController
 			params[:kind]=[]
 		end
 
-		@article.kinds_ids = params[:article_ids]
+		@article.kinds_ids = params[:kind_ids]
 
 		if(@article.update(article_params))
 			redirect_to admin_articles_path
