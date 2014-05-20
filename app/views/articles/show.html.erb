@@ -12,7 +12,10 @@
 		<p>source: <%= @article.source%></p>
 		<p>date: <%= @article.date%></p>
 		<p>priority: <%= @article.priority%></p>
-		<p>content: <%= @article.content%></p>
+		<p>content:</p>
+
+		<%= raw(@article.content)%>
+
 		<%= link_to 'Edit' , edit_admin_article_path(@article) , class: 'btn brn-primary btn-lg'%>
 		<%= link_to 'Delete' , admin_article_path(@article) , method: :delete , class: 'btn brn-primary btn-lg'%>
 

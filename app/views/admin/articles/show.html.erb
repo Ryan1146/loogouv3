@@ -14,8 +14,8 @@
 		<p>priority: <%= @article.priority%></p>
 		<p>content:</p>
 
-		<%= raw(@articles.content)%>
-		
+		<%= raw(@article.content)%>
+
 		<%= link_to 'Edit' , edit_admin_article_path(@article) , class: 'btn brn-primary btn-lg'%>
 		<%= link_to 'Delete' , admin_article_path(@article) , method: :delete , class: 'btn brn-primary btn-lg'%>
 
