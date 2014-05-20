@@ -15,11 +15,11 @@
 // require jquery.turbolinks
 // require turbolinks
 
+
 //= require ckeditor/override
 //= require ckeditor/init
 
-
-//= require_directory ./customization/scripts
+// require_directory ./customization/scripts
 //= require_directory ./customization/js
 //= require bootstrap
 
