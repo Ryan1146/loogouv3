@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140519222553) do
+ActiveRecord::Schema.define(version: 20140520014845) do
 
   create_table "activities", force: true do |t|
     t.string   "title"
@@ -32,6 +32,27 @@ ActiveRecord::Schema.define(version: 20140519222553) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "article_kinds", force: true do |t|
+    t.integer  "article_id"
+    t.integer  "kind_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "content"
+    t.string   "source"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "categories", force: true do |t|
@@ -56,5 +77,12 @@ ActiveRecord::Schema.define(version: 20140519222553) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "kinds", force: true do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
