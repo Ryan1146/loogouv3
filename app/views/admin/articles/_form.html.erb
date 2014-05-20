@@ -1,4 +1,3 @@
-
 <hr class="style-six">
 
 		<div class="form-group">
@@ -16,35 +15,16 @@
 
 		<div class="form-group">
 			
-			<%= f.label('location') %>
-
-			<%= f.text_field(:location , :class => "form-control") %>
+			<%= f.label('author') %>
+			<%= f.text_field(:author , :class => "form-control") %>
 		</div>
 
 
 		<div class="form-group">
 			
-		
-			<%= f.label('category') %>
-
-			<h3>
-
-			<% @categories.each do |category| %>
-
-			<%= check_box_tag("category_ids[]" , category.id ,false )  %>
-
-			<%= label_tag(:cate, category.name) %>
-
-			<%end%>
-
-
-			</h3>
+			<%= f.label('source') %>
+			<%= f.text_field(:source , :class => "form-control") %>
 		</div>
-
-
-
-
-
 
 
 
@@ -62,6 +42,24 @@
 			<%= f.text_field(:priority , :class => "form-control") %>
 		</div>
 
+		<div class="form-group">
+			
+		
+			<%= f.label('kind') %>
+
+			<h3>
+
+			<% @kinds.each do |kind| %>
+
+			<%= check_box_tag("kind_ids[]" , kind.id ,false )  %>
+
+			<%= label_tag(:cate, kind.name) %>
+
+			<%end%>
+
+
+			</h3>
+		</div>
 
 
 		<div classs="form-group">
@@ -69,10 +67,15 @@
 			<%= f.cktext_area(:content , :class => "form-control" , :ckeditor => {:height => '800'} )%>
 		</div>
 
-			
-		<hr class="style-six">
 
-	
+
+		
+<hr class="style-six">
+
+
+		
+
+
 
 
 

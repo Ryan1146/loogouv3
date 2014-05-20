@@ -7,11 +7,11 @@
                         </div>
                         <div class="subList">
 
-                            <% categories.each do |category| %>
+                            <% kinds.each do |kind| %>
 
-                                <%= link_to category_path(category) do%>
+                                <%= link_to kind_path(kind) do%>
                                     <div class="subListItem">
-                                        <%=category.name%>
+                                        <%=kind.name%>
                                     </div>
                                 <%end%>
                             <%end%>
@@ -23,34 +23,17 @@
                             活動分類
                         </div>
                         <div class="subList">
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
-                            <a href="">
-                                <div class="subListItem">
-                                </div>
-                            </a>
+                         
+                                
+                                <% categories.each do |category| %>
+
+                                <%= link_to category_path(category) do%>
+                                    <div class="subListItem">
+                                        <%=category.name%>
+                                    </div>
+                                <%end%>
+                            <%end%>
+             
                         </div>
                     </div>
                     <div class="navItem navAboutUs">

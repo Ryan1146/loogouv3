@@ -1,0 +1,24 @@
+<h1>Show</h1>
+
+<div class = "row">
+	<div class = "col-md-12">
+	
+	<ul>
+
+
+	<li>
+		<p>title: <%= @article.title%></p>
+		<p>author: <%= @article.author%></p>
+		<p>source: <%= @article.source%></p>
+		<p>date: <%= @article.date%></p>
+		<p>priority: <%= @article.priority%></p>
+		<p>content: <%= @article.content%></p>
+		<%= link_to 'Edit' , edit_admin_article_path(@article) , class: 'btn brn-primary btn-lg'%>
+		<%= link_to 'Delete' , admin_article_path(@article) , method: :delete , class: 'btn brn-primary btn-lg'%>
+
+	</li>
+
+	</ul>
+
+	</div>
+</div>

@@ -2,20 +2,20 @@
         <div class="activityZoon">
             <div class="activityZoonIn">
                 <div class="activeCateZoon">
-                    <div class="cateTit"><%= @category.name%></div>
+                    <div class="cateTit"><%= @kind.name%></div>
                     
-                    <%@activities.each do |activity|%>
+                    <%@kinds.each do |kind|%>
                     <div class="activityItem">
-                        <div class="activityTime"><%=activity.date%></div>
+                        <div class="activityTime"><%=article.date%></div>
                         <div class="activityPic"></div>
-                        <div class="contentTit"><span><%=activity.location%></span>&nbsp;&nbsp;&nbsp;<span><%=activity.title%></span></div>
-                        <div class="contentIn"><%= truncate(activity.content , :length=>300)%></div>
+                       &nbsp;&nbsp;&nbsp;<span><%=article.title%></span></div>
+                        <div class="contentIn"><%= truncate(article.content , :length=>300)%></div>
                         
-                        <div class="readMore"><%=link_to 'readMore' , activity_path(activity) %>
+                        <div class="readMore"><%=link_to 'readMore' , article_path(article) %>
                         </div>
 
 
-                        <%= link_to 'Show' , category_activity_path(@category ,activity) , class: 'btn brn-primary btn-lg'%>
+                        <%= link_to 'Show' , kind_article_path(@kind ,article) , class: 'btn brn-primary btn-lg'%>
                     </div>
                     <%end%>
           
