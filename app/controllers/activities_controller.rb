@@ -56,7 +56,7 @@ def new
 		end
 		
 		def activity_params
-			params.require(:activity).permit(:title , :content , :location , :category , :date , :priority , :image  )
+			params.require(:activity).permit(:title , :content , :location  , :date , :priority , :image  )
 		end
 
 end

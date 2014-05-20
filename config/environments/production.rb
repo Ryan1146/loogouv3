@@ -1,6 +1,7 @@
 Loogouv3::Application.configure do
 
   #connect heroku to amazon S3
+  #modify for ckeditor
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
