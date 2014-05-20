@@ -89,7 +89,7 @@ class Admin::ArticlesController < ApplicationController
   	end
 
   	def article_params
-  		params.require(:article).permit(:title , :content , :author , :source , :date ,:priority , :image )
+  		params.require(:article).permit(:title , :content , :author , :source , :date ,:priority , :image , :description)
   	end
 
 
